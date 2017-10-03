@@ -1,0 +1,10 @@
+{% extends base.html %}
+
+{% block content %}
+
+<h1>Welcome, {{username}}.</h1>
+{% if {{fav-food}} %}
+<h3>{{fav-food}} <strong>is</strong> delicious!</h3>
+{% endif %}
+
+{% endblock %}
