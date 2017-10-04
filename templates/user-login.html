@@ -1,18 +1,28 @@
 {% extends "base.html" %}
 
 {% block content %}
+<h2>User Login</h2>
 <div class="container">
-    <form>
-            <label>Username:<span class="error">{{username-error}}</span>
+    <form action="/welcome" method="post">
+            <label>Username:
                 <input type="text" name="username">
             </label>
+            {% if error %}
+            <p class='error'>{{ error }}</p>
+            {% endif %}
         </br>
-            <label>Password:<span class="error">{{password-error}}</span>
+            <label>Password:
                 <input type="text" name="password">
             </label>
+
         </br>
-            <label>Verify password:<span class="error">{{verifypassword-error}}</span>
-                    <input type="text" name="verify-password">
+            <label>Verify password:
+                
+                <input type="text" name="verify-password">
+            </label>
+        </br>
+            <label>Email (optional):
+                <input type="text" name="email">
             </label>
         </br>
             <label>Favorite food (optional):
