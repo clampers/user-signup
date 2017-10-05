@@ -35,9 +35,10 @@ def validate_userdata():
     
     if verify != password or verify == '' or " " in verify:
         verifyerror = "Passwords do not match"
-
-    if email.count("@") != 1 and email.count(".") != 1:
-        emailerror = "Invalid email"
+    
+    if email != '':
+        if email.count("@") != 1 and email.count(".") != 1:
+            emailerror = "Invalid email"
         
     
     if (usernameerror != '') or (passworderror != '') or (verifyerror != '') or (emailerror != ''):
