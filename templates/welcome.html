@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html>
+{% extends "base.html" %}
+{% block content %}
 <h1>Welcome, {{ username }}.</h1>
-{% if food|length > 0 %}
-<h3>{{ food }} is delicious!</h3>
-{% endif %}
-</html>
+{% endblock %}
